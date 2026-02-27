@@ -101,3 +101,10 @@ server.listen(PORT, () => {
     console.log("Open in browser: http://localhost:" + PORT);
     console.log("-----------------------------------------");
 });
+
+const { fork } = require('child_process');
+
+// Spin up the compactor as a background worker thread
+fork('./cron-compactor.js');
+console.log("🛠️ Background worker 'cron-compactor' attached.");
+
