@@ -34,13 +34,18 @@ orbitaldb/
 
 ## 🛠️ Usage Guide
 
-### 1. Initialize the Database
+### 1. Install OrbitalDB
+```bash
+npm i orbitaldb
+```
+
+### 2. Initialize the Database
 ```javascript
-const OrbitalDB = require('./index');
+const OrbitalDB = require('orbitaldb');
 const db = new OrbitalDB('my_app_production');
 ```
 
-### 2. Define a Collection & Schema
+### 3. Define a Collection & Schema
 Define the rules for your data. Fields can be required, typed, or act as references to other collections.
 ```javascript
 const userSchema = {
@@ -53,14 +58,14 @@ const userSchema = {
 const users = db.collection('users', userSchema);
 ```
 
-### 3. Create Secondary Indexes
+### 4. Create Secondary Indexes
 Speed up searches for non-ID fields.
 ```javascript
 users.createIndex('username');
 users.createIndex('email');
 ```
 
-### 4. Operations (Insert & Find)
+### 5. Operations (Insert & Find)
 ```javascript
 // Inserting a document
 await users.insert({
@@ -77,7 +82,7 @@ const user = await users.findOne(101);
 const userByEmail = await users.findOne({ email: 'admin@orbital.db' });
 ```
 
-### 5. Document Population (Cross-Collection Joins)
+### 6. Document Population (Cross-Collection Joins)
 
 
 ```javascript
