@@ -1,0 +1,13 @@
+# Exclude testing and development tools
+stress-test.js
+cron-compactor.js
+
+# Exclude documentation and metadata
+README.md
+LICENSE
+
+# Exclude hidden system files
+.git/
+.DS_Store
+node_modules/
+npm-debug.log

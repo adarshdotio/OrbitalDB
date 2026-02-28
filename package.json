@@ -1,19 +1,24 @@
 {
-  "name": "OrbitalDB",
+  "name": "orbitaldb",
   "version": "1.0.0",
   "description": "A lightweight, binary-encoded NoSQL database for Node.js",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "node stress-test.js",
-    "start": "node server.js"
+    "compact": "node cron-compactor.js"
   },
   "keywords": [
     "database",
     "nosql",
     "binary",
     "storage",
-    "node.js"
+    "node.js",
+    "termux",
+    "node-js",
+    "orbitaldb"
   ],
-  "author": "OrbitalDB Team",
-  "license": "MIT"
+  "author": "Adarsh Patel",
+  "license": "ISC",
+  "dependencies": {}
 }
