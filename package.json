@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A lightweight, binary-encoded NoSQL database for Node.js",
   "main": "server.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "node server.js",
     "test": "node stress-test.js",
